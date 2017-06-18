@@ -1,4 +1,18 @@
 //vamos hacer el request a nuestro servicio usando ajax con jquery
+        $.ajax({
+            url:'direccion',
+            type:'get',
+            success:function(json){
+                console.log("# de elementos encontrados"+json.length);
+                for(var i=0;i<json.length;i++){
+                    $("#elementos").append("<li>"+json[i].municipio+"</li>");
+                    $("#TABLITA").append("<tr><td>"+json[i].id+"</td><td>"+json[i].numero+"</td><td>"+json[i].cp+"</td><td>"+json[i].municipio+"</td></tr>");
+                }
+            }
+        });
+
+
+
 $("#guardarDireccion").click(function () {
 //Aqui aplicamos el metodo post uasando la uri del servicio
     var numero = $("#numero").val();
@@ -84,3 +98,7 @@ $("#Actualizar").click(function () {
     });
 }
 );
+
+
+
+
