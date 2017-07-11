@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin
 public class ControladorHola {
-    @RequestMapping(value="/hola/{mensaje}",method=RequestMethod.GET, headers={"Accept=text/html"})//metodo get no secita seguridad los navegadores lo aceptan por defecto
+    @RequestMapping(value="/hola/{mensaje}",method=RequestMethod.GET, headers={"Accept=text/html"})//metodo get no nesecita seguridad los navegadores lo aceptan por defecto
     public String saludar(@PathVariable String mensaje){ //GET ES SOLO DE LECTURA   //{mensaje} variable de ruta
        String algo="Bienvenido"+mensaje;
         return  algo;

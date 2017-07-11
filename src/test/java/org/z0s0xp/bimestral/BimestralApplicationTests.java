@@ -14,11 +14,13 @@ public class BimestralApplicationTests {
 
     @Autowired
     RepositorioDireccion repoDireccion;
+    @Autowired
+    RepositorioAuto repoaAuto;
     
 	//@Test
 	public void contextLoads() {
 	}
-         @Test
+        // @Test
          public void ProbarSuma ()throws Exception{
              int suma=2+2;
              assertEquals(4, suma);
