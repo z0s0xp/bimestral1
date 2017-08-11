@@ -24,3 +24,11 @@ create table auto(id_auto integer primary key,num_placa integer,marca varchar(20
 
 insert into auto values(1223,3330,'chevy','sedan');
  select * from auto;
+
+
+
+create table doctor( cedula integer primary key,nombre varchar(40),edad integer, especialidad varchar(40));
+
+create table paciente( no_consulta integer primary key, nombre varchar(40),edad integer, did_doctor integer,foreign key(did_doctor)references doctor(cedula) ); 
+
+select * from  paciente ;
